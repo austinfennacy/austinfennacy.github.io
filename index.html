@@ -59,10 +59,9 @@
 </html>
 
 <script>
-    $(function () {
-        $('#text1').slideUp(0).delay(500).slideDown(1000);
-        $('#text2').slideUp(0).delay(2500).slideDown(1000);
-        $('#text3').slideUp(0).delay(5000).slideDown(1000);
-        $('#eyemLookingAtYou').slideUp(0).delay(7500).slideDown(2000);
-    });
+    // don't wait for document to load, otherwise text may flicker before hide
+    $('#text1').slideUp(0).delay(500).slideDown(1000);
+    $('#text2').slideUp(0).delay(2500).slideDown(1000);
+    $('#text3').slideUp(0).delay(5000).slideDown(1000);
+    $('#eyemLookingAtYou').slideUp(0).delay(7500).slideDown(2000);
 </script>
