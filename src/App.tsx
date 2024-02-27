@@ -36,6 +36,17 @@ ${name}`;
     <div className="App">
       <header className="App-header">
         <div>
+          <p>
+            The City of San Diego has issued permits to VOLO to use a majority of the permanent
+            public nets at South Mission Beach, Ocean Beach, & The Pit every weekend from February
+            10th to August 4th. This unprecedented decision severely limits the community's access
+            to the free and public nets that the community (and not the city) have primarily paid to
+            maintain. Additionally, by not allowing VOLO permits to use the pop-up nets they've
+            already invested in, this decision seriously limits VOLO from offering scalable access
+            to beginners that want to play San Diego's fastest growing sport. Help support both the
+            San Diego public and VOLO intramural volleyball communities by sending an email to
+            Council Member Jennifer Campbell.
+          </p>
           <input type="text" placeholder="Your Name" value={name} onChange={handleChange} />
           <br />
           <button onClick={handleClick}>Send Email</button>
