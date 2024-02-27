@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.css';
 import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/esm/Container';
+import Form from 'react-bootstrap/esm/Form';
 
 function App() {
   const [name, setName] = useState('');
@@ -35,26 +37,39 @@ ${name}`;
   };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <div>
-          <p>
-            The City of San Diego has issued permits to VOLO to use a majority of the permanent
-            public nets at South Mission Beach, Ocean Beach, & The Pit every weekend from February
-            10th to August 4th. This unprecedented decision severely limits the community's access
-            to the free and public nets that the community (and not the city) have primarily paid to
-            maintain. Additionally, by not allowing VOLO permits to use the pop-up nets they've
-            already invested in, this decision seriously limits VOLO from offering scalable access
-            to beginners that want to play San Diego's fastest growing sport. Help support both the
-            San Diego public and VOLO intramural volleyball communities by sending an email to
-            Council Member Jennifer Campbell.
-          </p>
-          <input type="text" placeholder="Your Name" value={name} onChange={handleChange} />
-          <br />
-          <Button onClick={handleClick}>Send Email</Button>
-        </div>
-      </header>
-    </div>
+    <Container className="p-3">
+      <Container className="p-5 mb-4 bg-light rounded-3">
+        <p>
+          The City of San Diego has issued VOLO permits to use a majority of the permanent public
+          nets every weekend from February 10th to August 4th.
+        </p>
+        <p>
+          The City's unprecedented decision severely limits the community's access to free and
+          public nets that the community (and not the city) have primarily paid to maintain.
+          Additionally, by not granting VOLO permits to use the pop-up nets they've already invested
+          in, VOLO is left with significantly less nets to offer beginners access to San Diego's
+          fastest growing sport.
+        </p>
+        <p>
+          Help support both the San Diego public and VOLO intramural volleyball communities by
+          sending an email to Council Member Jennifer Campbell.
+        </p>
+        <Form>
+          <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Control
+              type="text"
+              placeholder="Your name"
+              value={name}
+              onChange={handleChange}
+            />
+            <Form.Text className="text-muted">
+              Your name will be added to the bottom of your drafted email.
+            </Form.Text>
+          </Form.Group>
+        </Form>
+        <Button onClick={handleClick}>Draft an Email</Button>
+      </Container>
+    </Container>
   );
 }
 
