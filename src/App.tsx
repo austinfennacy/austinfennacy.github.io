@@ -2,12 +2,13 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [name, setName] = useState('');    const email = 'test@example.com';
+  const [name, setName] = useState('');
+  const email = 'test@example.com';
 
   const handleChange = (event: any) => {
     setName(event.target.value);
   };
-  
+
   const handleClick = () => {
     const subject = 'Beach Volleyball Equity Issue regarding Volo Permits';
     const body = `Council member Campbell, 
@@ -34,18 +35,16 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <div>
-      <input 
-        type="text" 
-        placeholder="Your Name" 
-        value={name} 
-        onChange={handleChange} 
-      />
-      <br />
-      <button onClick={handleClick}>
-        Send Email
-      </button>
-    </div>
+        <div>
+          <input
+            type="text"
+            placeholder="Your Name"
+            value={name}
+            onChange={handleChange}
+          />
+          <br />
+          <button onClick={handleClick}>Send Email</button>
+        </div>
       </header>
     </div>
   );
