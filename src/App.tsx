@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+import Button from 'react-bootstrap/Button';
 
 function App() {
   const [name, setName] = useState('');
@@ -49,7 +51,7 @@ ${name}`;
           </p>
           <input type="text" placeholder="Your Name" value={name} onChange={handleChange} />
           <br />
-          <button onClick={handleClick}>Send Email</button>
+          <Button onClick={handleClick}>Send Email</Button>
         </div>
       </header>
     </div>
